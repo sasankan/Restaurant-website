@@ -28,8 +28,8 @@ export const NavLink = styled(Link)`
 export const NavIcon = styled.div`
   display: block;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 22.5px;
+  right: 2px;
   cursor: pointer;
   color: #fff;
   p {
