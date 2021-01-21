@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import FirstPage from './Component/FirstPage';
+import Products from './Component/Products';
+import { GlobalStyle } from './GlobalStyles';
+import { productData, productDataTwo } from './Component/Products/data';
+import Feature from './Component/Feature';
+import Footer from './Component/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <GlobalStyle/>
+      <FirstPage/>
+      <Products heading='Choose your favorite' data={productData} />
+      <Feature />
+      <Products heading='Other special dishes' data={productDataTwo} />
+      <Footer />
+    </Router>
   );
 }
 
